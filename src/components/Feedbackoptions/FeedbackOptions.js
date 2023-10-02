@@ -26,27 +26,3 @@ FeedbackOptions.propTypes = {
   options: PropTypes.object,
   onLeaveFeedback: PropTypes.func,
 };
-// export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
-//   <ul>
-//     <li>
-//       <button type="button" onClick={handleGood}>
-//         Good
-//       </button>
-//     </li>
-//     <li>
-//       <button type="button" onClick={handleNeutral}>
-//         Neutral
-//       </button>
-//     </li>
-//     <li>
-//       <button type="button" onClick={handleBad}>
-//         Bad
-//       </button>
-//     </li>
-//   </ul>
-// );
-// FeedbackOptions.propTypes = {
-//   handleGood: PropTypes.string,
-//   handleNeutral: PropTypes.string,
-//   handleBad: PropTypes.string,
-// };

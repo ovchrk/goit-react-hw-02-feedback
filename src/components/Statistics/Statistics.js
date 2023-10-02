@@ -10,26 +10,22 @@ export const Statistics = ({
   positivePercentage,
 }) => (
   <div className={css.list}>
-    <p>
-      Good: <span>{good}</span>
+    <p className={css.label}>
+      Good: <span className={css.stats}>{good}</span>
     </p>
-    <p>
-      Neutal: <span>{neutral}</span>
+    <p className={css.label}>
+      Neutal: <span className={css.stats}>{neutral}</span>
     </p>
-    <p>
-      Bad: <span>{bad}</span>
+    <p className={css.label}>
+      Bad: <span className={css.stats}>{bad}</span>
     </p>
-    <p>
-      Total: <span>{total}</span>
-      {/* Total: <span>{this.countTotalFeedback()}</span> */}
+    <p className={css.label}>
+      Total: <span className={css.stats}>{total}</span>
     </p>
-    <p>
-      Positive feedback: <span>{positivePercentage}%</span>
+    <p className={css.label}>
+      Positive feedback:{' '}
+      <span className={css.stats}>{positivePercentage}%</span>
     </p>
-    {/* <p>
-              Positive feedback:{' '}
-              <span>{this.countPositiveFeedbackPercentage()}%</span>
-            </p> */}
   </div>
 );
 Statistics.propTypes = {
@@ -39,4 +35,3 @@ Statistics.propTypes = {
   total: PropTypes.number,
   positivePercentage: PropTypes.string,
 };
-// export default Statistics;

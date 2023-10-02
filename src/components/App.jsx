@@ -7,17 +7,14 @@ import { Notification } from "./Notification";
 
 
 class App extends Component {
-  // static defaultProps = {
-  //   initialValue: 0,
-  // };
   state = {
     good: 0,
     neutral: 0, 
     bad: 0,
   };
-  handleFeedback = (evt) => {
+  handleFeedback = ({target}) => {
    this.setState(prevState => ({
-      [evt.target.name]: prevState[evt.target.name] + 1,
+      [target.name]: prevState[target.name] + 1,
     }));
 }
 
@@ -37,7 +34,6 @@ class App extends Component {
         <Section title={"Please leave your feedback"} >
            <FeedbackOptions options={this.state} onLeaveFeedback={this.handleFeedback}/>
         </Section>
-        {/* <h1>Please leave your feedback</h1> */}
         <Section title={"Statistics"}>
           {this.countTotalFeedback() > 0
             ? <Statistics
